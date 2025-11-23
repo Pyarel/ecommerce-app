@@ -1,5 +1,5 @@
 import "./OrdersPage.css";
-import { Header } from "../components/header";
+import { Header } from "../components/Header";
 export function OrdersPage() {
   return (
     <>

@@ -1,10 +1,12 @@
 import "./HomePage.css";
-import { Header } from "../components/header";
+import { Header } from "../components/Header";
+
 export function HomePage() {
   return (
     <>
-      <title>E-commerce Project</title>
       <Header />
+      <title>E-commerce Project</title>
+
       <div className="home-page">
         <div className="products-grid">
           <div className="product-container">

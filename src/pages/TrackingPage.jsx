@@ -1,5 +1,5 @@
 import "./TrackingPage.css";
-import { Header } from "../components/header";
+import { Header } from "../components/Header";
 export function TrackingPage() {
   return (
     <>
