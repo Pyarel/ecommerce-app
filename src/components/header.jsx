@@ -1,4 +1,5 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
+import WhiteLogo from "../assets/logo-white.png";
 import "./Header.css";
 export function Header() {
   return (
@@ -6,8 +7,8 @@ export function Header() {
       <div className="header">
         <div className="left-section">
           <Link to="/" className="header-link">
-            <img className="logo" src="images/logo-white.png" />
-            <img className="mobile-logo" src="images/mobile-logo-white.png" />
+            <img className="logo" src={WhiteLogo} />
+            <img className="mobile-logo" src={WhiteLogo} />
           </Link>
         </div>
 
@@ -20,9 +21,9 @@ export function Header() {
         </div>
 
         <div className="right-section">
-          <Link className="orders-link header-link" to="/orders">
+          <NavLink className="orders-link header-link " to="/orders">
             <span className="orders-text">Orders</span>
-          </Link>
+          </NavLink>
 
           <Link className="cart-link header-link" to="/checkout">
             <img className="cart-icon" src="images/icons/cart-icon.png" />
