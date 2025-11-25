@@ -9,9 +9,11 @@ export function OrdersPage({ cart }) {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/orders?expand=products").then((response) => {
+    const getOrdersData = async () => {
+      const response = await axios.get("/api/orders?expand=products");
       setOrders(response.data);
-    });
+    };
+    getOrdersData();
   }, []);
 
   return (
@@ -76,7 +78,9 @@ export function OrdersPage({ cart }) {
                         </div>
 
                         <div className="product-actions">
-                          <Link to="/tracking">
+                          <Link
+                            to={`/tracking/${order.id}/${orderProduct.product.id}`}
+                          >
                             <button className="track-package-button button-secondary">
                               Track package
                             </button>

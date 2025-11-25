@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import { ProductsGrid } from "./ProductsGrid";
 import { useEffect, useState } from "react";
 
-export function HomePage({ cart }) {
+export function HomePage({ cart, loadCart }) {
   //   fetch("http://localhost:3000/api/products")
   //     .then((response) => {
   //       return response.json();
@@ -28,7 +28,7 @@ export function HomePage({ cart }) {
       <title>E-commerce Project</title>
       <link rel="icon" type="image/svg+xml" href="/home-favicon.png" />
       <div className="home-page">
-        <ProductsGrid products={products} />
+        <ProductsGrid products={products} loadCart={loadCart} />
       </div>
     </>
   );
