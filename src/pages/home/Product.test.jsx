@@ -46,6 +46,7 @@ describe("Product component", () => {
     );
     expect(screen.getByText("87")).toBeInTheDocument();
   });
+
   it("adds a product to the cart", async () => {
     render(<Product product={product} loadCart={loadCart} />);
 
